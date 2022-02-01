@@ -22,7 +22,7 @@ class Navigation extends Component {
         <div>
           <Navbar bg="dark" variant="dark">
             <Container>
-              <Navbar.Brand href="/home">NEGSAT</Navbar.Brand>
+              <Navbar.Brand as={Link} to={"/home"}>NEGSAT</Navbar.Brand>
               <Nav className="me-auto">
                 <Nav.Link as={Link} to={"/home"}>
                   Home
