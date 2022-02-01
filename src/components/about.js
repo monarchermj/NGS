@@ -1,34 +1,38 @@
 import React, { Component } from "react";
+import Tabs from "react-bootstrap/Tabs";
+import Tab from "react-bootstrap/Tab";
 import Nav from "react-bootstrap/Nav";
+import { useState } from "react";
 
 class About extends Component {
   render() {
     return (
       <div>
         <h1>About</h1>
-        <Nav variant="tabs" defaultActiveKey="/home">
-          <Nav.Item>
-            <Nav.Link href="/home">Active</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="link-1">Option 2</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="disabled" disabled>
-              Disabled
-            </Nav.Link>
-          </Nav.Item>
-        </Nav>
+        <Tabs
+          defaultActiveKey="profile"
+          id="uncontrolled-tab-example"
+          className="mb-3"
+        >
+          <Tab eventKey="home" title="Tabs"></Tab>
+          <Tab eventKey="profile" title="Image">
+            <img
+              src="https://wallpapercave.com/wp/wp6921036.jpg"
+              height="400px"
+            ></img>
+          </Tab>
+          <Tab eventKey="disabled" title="Blank" disabled></Tab>
+        </Tabs>
         <Nav variant="pills" defaultActiveKey="/home">
           <Nav.Item>
-            <Nav.Link href="/home">Active</Nav.Link>
+            <Nav.Link href="/home">Pills</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-1">Option 2</Nav.Link>
+            <Nav.Link href="/register">Register</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link eventKey="disabled" disabled>
-              Disabled
+              Blank
             </Nav.Link>
           </Nav.Item>
         </Nav>
