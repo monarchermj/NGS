@@ -26,7 +26,7 @@ class Navigation extends Component {
               <Nav className="me-auto">
                 <Nav.Link as={Link} to={"/home"}>
                   Home
-                </Nav.Link>
+                </Nav.Link>*
                 <Nav.Link as={Link} to={"/register"}>
                   Register
                 </Nav.Link>
@@ -39,9 +39,10 @@ class Navigation extends Component {
         </div>
         <div>
         <Routes>
-          <Route path="/home"element={<Home />}></Route>
-          <Route path="/register"element={<Register />}></Route>
-          <Route path="/about"element={<About />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/about" element={<About />}></Route>
         </Routes>
         </div>
       </BrowserRouter>
